@@ -1,1 +1,1 @@
-worker: python calvin.py
+web: python server.py
