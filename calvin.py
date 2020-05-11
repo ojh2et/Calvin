@@ -1,13 +1,18 @@
 from bs4 import BeautifulSoup
 import requests
 import tweepy
-from credentials import *
 from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
+from os import environ
 
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
+CONSUMER_KEY = environ['consumer_key']
+CONSUMER_SECRET = environ['consumer_secret']
+ACCESS_TOKEN = environ['access_token']
+ACCESS_TOKEN_SECRET = environ['access_token_secret']
+
+auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 
 

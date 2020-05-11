@@ -1,1 +1,1 @@
-"worker: python calvin.py" 
+worker: python calvin.py
